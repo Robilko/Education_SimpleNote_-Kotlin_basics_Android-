@@ -9,12 +9,12 @@ class NotesAdapter : RecyclerView.Adapter<NoteViewHolder>() {
     private var data: List<NoteEntity> = ArrayList()
     private var onItemClickListener: OnItemClickListener? = null
 
-    interface OnItemClickListener {
+    fun interface OnItemClickListener {
         fun onItemClick(note: NoteEntity?)
     }
 
-    fun setOnItemClickListener(onItemClickListener: (Any) -> Unit) {
-        this.onItemClickListener = onItemClickListener as OnItemClickListener?
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener?) {
+        this.onItemClickListener = onItemClickListener
     }
 
     fun setData(notes: List<NoteEntity>) {
