@@ -29,7 +29,7 @@ class NoteListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         adapter = NotesAdapter()
-        adapter!!.setOnItemClickListener { item -> contract!!.editNote(item as NoteEntity) }
+        adapter!!.setOnItemClickListener { item -> contract!!.editNote(item as NoteEntity?) }
         recyclerView!!.layoutManager = LinearLayoutManager(context)
         recyclerView!!.adapter = adapter
         adapter!!.setData(noteList)

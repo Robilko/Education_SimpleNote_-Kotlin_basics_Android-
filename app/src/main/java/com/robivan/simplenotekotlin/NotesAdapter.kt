@@ -14,7 +14,7 @@ class NotesAdapter : RecyclerView.Adapter<NoteViewHolder>() {
     }
 
     fun setOnItemClickListener(onItemClickListener: (Any) -> Unit) {
-        this.onItemClickListener = onItemClickListener as OnItemClickListener
+        this.onItemClickListener = onItemClickListener as OnItemClickListener?
     }
 
     fun setData(notes: List<NoteEntity>) {
